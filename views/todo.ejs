@@ -2,36 +2,50 @@
 
 <html>
 
-    <head>
-        <title>Todo List APP test</title>
-        <style>
-            a {
-                text-decoration: none;
-                color: black;
-            }
+<head>
+    <title>Todo List APP test</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+            box-shadow: inset;
+        }
+        h1{
+            columns: '#FFFFFF';
 
-        </style>
-    </head>
+        }
 
-    <body>
-        <h1>Jenkins is just Amazing, Awesome and I will attend Live sessions</h1>
-        <ul>
-            <% todolist.forEach(function(todo, index) { %>
+        body {
+            background-image: url(/views/devops_image.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Node todo application</h1>
+    <ul>
+        <% todolist.forEach(function(todo, index) { %>
             <li>
                 <a href="/todo/delete/<%= index %>">✘</a>
                 <a href="/todo/<%= index %>">✎</a>
                 <%- todo %>
             </li>
             <% }); %>
-        </ul>
+    </ul>
 
-        <form action="/todo/add/" method="post">
-            <p>
-                <label for="newtodo">What shoud I do?</label>
-                <input type="text" name="newtodo" id="newtodo" autofocus />
-                <input type="submit" value="Add" />
-            </p>
-        </form>
-    </body>
+    <form action="/todo/add/" method="post">
+        <p>
+            <label for="newtodo">What shoud I do?</label>
+            <input type="text" name="newtodo" id="newtodo" autofocus />
+            <input type="submit" value="Add" />
+        </p>
+    </form>
+</body>
 
 </html>
