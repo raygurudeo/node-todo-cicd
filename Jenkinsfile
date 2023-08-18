@@ -6,12 +6,12 @@ pipeline {
                 git url: 'https://github.com/raygurudeo/node-todo-cicd.git',branch: 'master'
             }
         }
-        stage("Build") {
-            steps {
-                sh "docker build . --rm -t node-todo-cicd"
-                echo "Code Build and test completed..."
-            }
-        }
+        // stage("Build") {
+        //     steps {
+        //         sh "docker build . --rm -t node-todo-cicd"
+        //         echo "Code Build and test completed..."
+        //     }
+        // }
         // stage("Push To Dockerhub") {
         //     steps {
         //         withCredentials([usernamePassword(credentialsId:"dockerhub",passwordVariable:"dockerHubPass",usernameVariable:"dockerHubUser")]){
