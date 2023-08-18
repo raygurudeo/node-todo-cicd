@@ -2,6 +2,6 @@ version: '3.9'
 
 services:
   web:
-    image: raygurudeo/node-todo-cicd
+    build: .
     ports:
       - "8000:8000"
