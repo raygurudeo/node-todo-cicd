@@ -4,4 +4,4 @@ COPY . .
 RUN npm install
 RUN npm audit --fix
 EXPOSE 8000
-CMD ["npm","app.js"]
+CMD ["node","app.js"]
