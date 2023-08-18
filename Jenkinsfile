@@ -8,12 +8,8 @@ pipeline {
         }
         stage("Build") {
             steps {
-                echo "Code Build"
-            }
-        }
-        stage("Test") {
-            steps {
-                echo "Code Tested"
+                sh "docker build . --rm -t node-todo-cicd"
+                echo "Code Build and test completed..."
             }
         }
         stage("Deploy") {
