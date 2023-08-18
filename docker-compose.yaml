@@ -4,4 +4,4 @@ services:
   web:
     image: "raygurudeo/node-todo-cicd:latest"
     ports:
-      - 8000:8000
+      - "8000:8000"
