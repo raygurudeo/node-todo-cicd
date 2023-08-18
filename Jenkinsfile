@@ -21,6 +21,7 @@ pipeline {
                     echo "Image pushed to Dockerhub"
                 }
             }
+        }
         stage("Deploy") {
             steps {
                 echo "Application Deployed"
